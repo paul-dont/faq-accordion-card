@@ -1,0 +1,229 @@
+:root {
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* #### Gradient
+Background gradient: */
+
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --bg-gradient: linear-gradient(
+    0deg,
+    rgba(101, 101, 231, 1) 0%,
+    rgba(175, 103, 233, 1) 100%
+  );
+  /* ### Neutral */
+
+  /* #### Text */
+
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* #### Dividers */
+
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background-image: var(--bg-gradient);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* /////////////////// */
+/* Card Body */
+.faq__card {
+  margin: 0 auto;
+  width: 30rem;
+  background-color: var(--light-grayish-blue);
+  padding: 1.5rem 2rem 4.5rem 2rem;
+  border-radius: 20px;
+}
+
+@media (min-width: 1440px) {
+  .faq__card {
+    display: flex;
+    justify-content: center;
+    width: 80rem;
+    overflow: hidden;
+  }
+}
+
+/* /////////////////// */
+/* Card Logo */
+.faq__logoMobile--container {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(40%);
+  height: 0;
+}
+
+.faq__logoMobile {
+  margin: 0 auto;
+  width: 74%;
+  transform: translateY(-60%);
+}
+
+.faq__logoMobile--shadow {
+  margin: 0 auto;
+  width: 74%;
+  transform: translateY(-175%);
+}
+
+@media (min-width: 1440px) {
+  .faq__logoMobile--container {
+    display: none;
+  }
+}
+
+.faq__logoDesktop--container {
+  width: 50%;
+  display: none;
+  position: relative;
+  left: -50%;
+}
+
+@media (min-width: 1440px) {
+  .faq__logoDesktop--container {
+    display: block;
+  }
+}
+
+.faq__logoDesktop {
+  width: 37rem;
+  position: absolute;
+  bottom: 5%;
+  left: 79%;
+}
+
+.faq__logoDesktop--shadow {
+  width: 70rem;
+  position: absolute;
+  bottom: -42%;
+  left: -7%;
+}
+
+.faq__logoDesktop--box {
+  width: 15rem;
+  display: none;
+  position: fixed;
+  transform: translateY(12.5rem) translateX(29rem);
+}
+
+@media (min-width: 1440px) {
+  .faq__logoDesktop--box {
+    display: block;
+  }
+}
+
+/* /////////////////// */
+/* Card Items */
+.faq__header {
+  text-align: center;
+  margin: 10rem 0 1.5rem;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+@media (min-width: 1440px) {
+  .faq__header {
+    margin: 2rem 0 1.5rem;
+    text-align: left;
+  }
+}
+
+.faq__questions {
+  list-style: none;
+}
+
+@media (min-width: 1440px) {
+  .faq__questions {
+    width: 50%;
+    padding-right: 5rem;
+  }
+}
+
+.faq__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: all 0.3s ease-in-out;
+}
+
+.faq__border {
+  border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.faq__question {
+  display: inline-block;
+  margin: 1.5rem 0 0;
+  padding: 0 0 1.5rem;
+}
+
+.faq__question:hover {
+  cursor: pointer;
+  color: var(--soft-red);
+}
+
+.faq__answer {
+  color: var(--dark-grayish-blue);
+  inline-size: 25rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 1440px) {
+  .faq__answer {
+    inline-size: 35rem;
+  }
+}
+
+/* /////////////////// */
+/* Card Button */
+.faq__btn {
+  width: 10px;
+  height: 7px;
+}
+
+.faq__btn:hover {
+  cursor: pointer;
+}
+
+.faq__btn--rotate {
+  transform: rotate(180deg);
+}
+
+/* /////////////////// */
+/* JavaScript classes */
+.faq__bold {
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
